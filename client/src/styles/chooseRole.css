@@ -1,0 +1,64 @@
+/* File: /client/src/styles/chooseRole.css */
+/* Function: Estilos para ChooseRole.js */
+
+.choose-role-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #111;
+  color: #fff;
+}
+
+.filmstrip {
+  width: 100%;
+  height: 50px;
+  background: repeating-linear-gradient(
+    45deg,
+    #fff 0px,
+    #fff 10px,
+    #000 10px,
+    #000 20px
+  );
+}
+
+.choose-role-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  height: calc(100vh - 50px);
+}
+
+.choose-role-title {
+  font-size: 2em;
+  text-align: center;
+}
+
+.btn-pink {
+  background-color: #ff0080;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.btn-pink:hover {
+  background-color: #e60073;
+}
+
+.btn-secondary {
+  background-color: #fff;
+  color: #111;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.btn-secondary:hover {
+  background-color: #ccc;
+}

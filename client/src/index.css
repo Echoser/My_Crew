@@ -1,0 +1,23 @@
+/* File: /client/src/index.css */
+/* Estilos globales y de layout */
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #111;
+  color: #fff;
+  margin: 0;
+}
+
+/* Aquí puedes incluir resets adicionales o utilidades globales */
+

@@ -1,0 +1,48 @@
+/* File: /client/src/styles/footer.css
+   Function: Estilos para el componente Footer. */
+
+/* Pie de página */
+.footer {
+  background-color: #222;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+/* Contenedor de logos de partners */
+.footer .partners {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+/* Logos de partners */
+.footer .partners img {
+  width: 80px;
+  height: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1); /* Si necesitas transformar logos para fondo oscuro */
+  transition: transform 0.3s;
+}
+.footer .partners img:hover {
+  transform: scale(1.1);
+}
+
+/* Texto final */
+.footer p {
+  margin: 0;
+  color: #bbb;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 600px) {
+  .footer .partners {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .footer .partners img {
+    width: 60px;
+  }
+}

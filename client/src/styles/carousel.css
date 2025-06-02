@@ -1,0 +1,69 @@
+/* 
+   File: /client/src/styles/carousel.css
+   Function: Estilos para el componente Carousel.
+   Descripción:
+     - Define tamaño fijo del carrusel (width 380px, height 600px) con overflow oculto.
+     - Cada slide (carousel-item) ocupa todo el contenedor, con opacidad 0 por defecto y opacidad 1 cuando está activo.
+     - Imagen dentro de cada slide ocupa 100% y tiene esquinas redondeadas.
+     - Texto (rol + testimonial) aparece debajo de la imagen, centrado, con color claro.
+*/
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 380px;   /* Ancho del carrusel */
+  height: 600px;  /* Alto del carrusel */
+  margin: 0 auto;
+}
+
+.carousel-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 380px;
+  height: 600px;
+  opacity: 0;
+  transition: opacity 1s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.carousel-item.active {
+  opacity: 1;
+  position: relative;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px; /* Esquinas redondeadas */
+}
+
+.slide-text {
+  margin-top: 10px;
+  width: 100%;
+  color: #fff;
+  padding: 0 10px;
+}
+
+.slide-text h3 {
+  margin-bottom: 8px;
+  font-size: 1.1em;
+  color: #ff0080; /* Título en rosa */
+}
+
+.slide-text p {
+  font-size: 0.9em;
+  line-height: 1.3;
+  color: #ddd;    /* Texto testimonial en gris claro */
+}
+
+/* Se eliminan flechas o controles manuales */
+.carousel-control {
+  display: none;
+}

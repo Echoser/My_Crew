@@ -1,0 +1,100 @@
+/* File: /client/src/styles/navbar.css */
+/* Function: Estilos para NavBar.js */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: #222;
+  padding: 10px 20px;
+  height: 60px;
+}
+
+.navbar-left {
+  flex: 1;
+}
+
+.navbar-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.navbar-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1em;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.search-btn {
+  background-color: #000;
+  border: 2px solid #ff0080;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+.search-btn:hover {
+  background-color: #ff0080;
+}
+
+.avatar-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.navbar-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ff0080;
+}
+
+.avatar-dropdown {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: #333;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 9999;
+}
+
+.avatar-dropdown button {
+  background: none;
+  border: none;
+  color: #fff;
+  text-align: left;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.avatar-dropdown button:hover {
+  background-color: #444;
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1em;
+  cursor: pointer;
+  font-weight: bold;
+}

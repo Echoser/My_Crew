@@ -1,0 +1,227 @@
+/* 
+   File: /client/src/styles/register.css
+   Function: Estilos para la página de registro.
+   Descripción:
+     - Define el layout general de la página de registro con fondo oscuro.
+     - Establece estilos para la filmstrip, el contenido de registro y formularios.
+     - Tiene estilos específicos para el rol "productor" (formulario más ancho y con mayor espacio entre el carrusel y el formulario, y se desplaza ligeramente a la izquierda)
+       y para "freelance" (contenedor más estrecho).
+     - Se centra el título "Regístrate".
+*/
+
+/* Contenedor principal de la página de registro */
+.register-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #111; /* Fondo oscuro */
+  color: #fff;
+}
+
+/* Filmstrip en la parte superior */
+.filmstrip {
+  width: 100%;
+  height: 50px;
+  background: repeating-linear-gradient(
+    45deg,
+    #fff 0px,
+    #fff 10px,
+    #000 10px,
+    #000 20px
+  );
+}
+
+/* Contenido general del registro, con separación entre el slider y el formulario */
+.register-content {
+  display: flex;
+  gap: 80px; /* Espacio entre el carrusel y la parte derecha */
+  padding: 20px;
+  max-width: 1600px; /* Ajusta el ancho máximo si lo deseas */
+  margin: 0 auto;
+}
+
+/* Estilo para el slider (lado izquierdo) */
+.register-slider {
+  flex: 1; /* Se expande */
+  /* Aquí puedes agregar estilos específicos para el carrusel */
+}
+
+/* Título de registro, centrado */
+.register-title {
+  font-size: 2.5em; /* Ajusta el tamaño según sea necesario */
+  line-height: 1.2;
+  margin-bottom: 40px;
+  color: #fff;
+  text-align: center;  /* Título centrado */
+}
+
+/* Estilos genéricos para inputs y selects dentro de .register-form */
+.register-form input,
+.register-form select {
+  padding: 12px;
+  border: 1px solid #555;
+  border-radius: 30px;
+  background-color: #222;
+  color: #fff;
+  width: 100%; /* Ajusta el tamaño según sea necesario */
+}
+
+.register-form input:focus,
+.register-form select:focus {
+  border-color: #ff0080; /* Cambia el color del borde cuando está enfocado */
+  outline: none; /* Elimina el borde de enfoque predeterminado */
+}
+
+/* ============================ */
+/* Estilos específicos para Productor */
+/* ============================ */
+
+/* Contenedor para el registro de productor:
+   Se desplaza ligeramente a la izquierda para diferenciarlo */
+.register-content-productor {
+  display: flex;
+  gap: 120px; /* Aumenta el espacio entre el carrusel y el formulario */
+  align-items: center; /* Centra verticalmente el contenido */
+  margin-left: 25%; /* Se desplaza un poco hacia la izquierda */
+}
+
+/* Contenedor del formulario para productor: más ancho */
+.register-form-container-productor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  max-width: 1200px;  /* Contenedor amplio para productor */
+  width: 100%;
+}
+
+/* Formulario para productor: ancho 100% */
+.register-form-productor {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center; /* Centra el contenido */
+  width: 150%;        /* Ahora ocupa el 100% */
+  max-width: 800px;   /* Valor máximo */
+}
+
+/* Estilos para inputs y selects en el formulario de productor */
+.register-form-productor input,
+.register-form-productor select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #555;
+  border-radius: 30px;
+  background-color: #222;
+  color: #fff;
+}
+
+/* ============================ */
+/* Estilos específicos para Freelance */
+/* ============================ */
+
+/* Contenedor para el registro de freelance */
+.register-form-container-freelance {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding-left: 10%;
+  max-width: 700px; /* Contenedor más estrecho para freelance */
+}
+
+/* Formulario para freelance */
+.register-form-freelance {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Estilos para inputs y selects en el formulario de freelance */
+.register-form-freelance input,
+.register-form-freelance select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #555;
+  border-radius: 30px;
+  background-color: #222;
+  color: #fff;
+}
+
+/* ============================ */
+/* Estilos para select múltiple */
+/* ============================ */
+
+select[multiple] {
+  overflow: hidden; /* Oculta la barra de desplazamiento */
+  height: auto;     /* Ajusta la altura según sea necesario */
+  padding-right: 20px; /* Espacio para el contenido desplazable */
+}
+
+select[multiple] option {
+  position: relative;
+  padding-left: 50px; /* Espacio para el círculo */
+  cursor: pointer;
+}
+
+select[multiple] option::before {
+  content: '○'; /* Punto con centro vacío */
+  color: #ff0080; /* Color del borde */
+  position: absolute;
+  left: 10px; /* Ajusta la posición */
+  top: 50%; /* Centrado vertical */
+  transform: translateY(-50%);
+  font-size: 2em; /* Tamaño del círculo */
+}
+
+select[multiple] option:checked::before {
+  content: '●'; /* Punto relleno */
+  color: #ff0080;
+}
+
+select[multiple] option:hover::before {
+  content: '○';
+  color: #ff0080;
+}
+
+select[multiple] option:checked {
+  background-color: #ff0080; /* Fondo para opción seleccionada */
+  color: #fff; /* Texto blanco */
+}
+
+select[multiple]::-webkit-scrollbar {
+  display: none; /* Oculta la barra en navegadores WebKit */
+}
+
+/* ============================ */
+/* Botones */
+/* ============================ */
+
+.btn-pink {
+  background-color: #ff0080;
+  color: #fff;
+  border: none;
+  padding: 20px 30px; /* Ajusta el tamaño según sea necesario */
+  font-size: 1.2em;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.btn-pink:hover {
+  background-color: #e60073;
+}
+
+.btn-secondary {
+  background-color: #fff;
+  color: #111;
+  border: none;
+  padding: 20px 30px; /* Ajusta el tamaño según sea necesario */
+  font-size: 1.2em;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.btn-secondary:hover {
+  background-color: #ccc;
+}

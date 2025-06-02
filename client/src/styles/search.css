@@ -1,0 +1,156 @@
+/* File: /client/src/styles/search.css */
+/* Function: Estilos para Search.js */
+
+.search-page {
+  min-height: 100vh;
+  background-color: #111;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.filmstrip {
+  width: 100%;
+  height: 50px;
+  background: repeating-linear-gradient(
+    45deg,
+    #fff 0px,
+    #fff 10px,
+    #000 10px,
+    #000 20px
+  );
+}
+
+/* Botones principales (“Todos los Trabajos”, “Actores y Artistas”, “Recursos”) */
+.top-buttons {
+  display: flex;
+  justify-content: center;
+  background-color: #000;
+  padding: 10px;
+  gap: 20px;
+}
+
+.top-btn {
+  background: none;
+  border: 2px solid #ff0080;
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.top-btn.active {
+  background-color: #ff0080;
+}
+
+/* Fila de filtros */
+.filters-row {
+  display: flex;
+  flex-wrap: nowrap;       /* Una sola línea */
+  gap: 2%;
+  justify-content: center; /* Centrar horizontalmente */
+  margin: 2% auto;
+  width: 95%;
+  overflow-x: auto;        /* Scroll horizontal si hace falta */
+}
+
+.filter-box {
+  flex: 0 0 12%;
+  min-width: 120px;
+  background-color: #ff0080;
+  border-radius: 20px;
+  padding: 10px 15px;
+  color: #fff;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+
+.filter-title {
+  font-size: 0.9em;
+  margin-bottom: 5px;
+}
+
+.filter-box select,
+.filter-box input {
+  width: 100%;
+  padding: 6px;
+  border: none;
+  border-radius: 10px;
+}
+
+/* Resultados */
+.results-section {
+  flex: 1;
+  padding: 20px;
+}
+
+.results-count {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.2em;
+  color: #fff;
+}
+
+.result-card {
+  background-color: #222;
+  color: #fff;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.remunerado-label {
+  background-color: #ff0080;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 10px;
+  font-size: 0.8em;
+  align-self: start;
+}
+
+.result-info {
+  flex: 1;
+}
+
+.result-title {
+  font-size: 1.1em;
+  margin-bottom: 8px;
+  color: #ff0080;
+}
+
+.result-location,
+.result-details {
+  font-size: 0.9em;
+  margin-bottom: 8px;
+  color: #ccc;
+}
+
+.result-desc {
+  font-size: 0.9em;
+  margin-bottom: 12px;
+  color: #ddd;
+}
+
+.result-button {
+  display: flex;
+  align-items: center;
+}
+
+.big-action-btn {
+  background-color: #ff0080;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1em;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.big-action-btn:hover {
+  background-color: #e60073;
+}

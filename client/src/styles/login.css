@@ -1,0 +1,100 @@
+/* File: /client/src/styles/login.css
+   Function: Estilos para la página de inicio de sesión (Login).
+   Descripción:
+     - Fondo oscuro con filmstrip en la parte superior.
+     - Centrado vertical y horizontal del formulario.
+     - Inputs y botones con estilo consistente (bordes redondeados, colores rosa/blanco/negro).
+*/
+
+/* Contenedor principal de la página de login */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #111; /* Fondo oscuro */
+  color: #fff;
+}
+
+/* Filmstrip en la parte superior */
+.filmstrip {
+  width: 100%;
+  height: 50px;
+  background: repeating-linear-gradient(
+    45deg,
+    #fff 0px,
+    #fff 10px,
+    #000 10px,
+    #000 20px
+  );
+}
+
+/* Contenido de login: centrar formulario */
+.login-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Título de la página de login */
+.login-title {
+  font-size: 2em;
+  margin-bottom: 30px;
+  color: #fff;
+  text-align: center;
+}
+
+/* Estilos del formulario de login */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 320px;
+  background-color: #222; /* Burbuja oscura para el formulario */
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  box-sizing: border-box;
+}
+
+/* Inputs de email y contraseña */
+.login-form input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #555;
+  border-radius: 30px;
+  background-color: #333;
+  color: #fff;
+  font-size: 1em;
+}
+
+.login-form input:focus {
+  border-color: #ff0080; /* Borde rosa al enfocar */
+  outline: none;
+}
+
+/* Botón rosa de "Entrar" */
+.btn-pink {
+  background-color: #ff0080;
+  color: #fff;
+  border: none;
+  padding: 15px 20px;
+  font-size: 1em;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-pink:hover {
+  background-color: #e60073;
+}
+
+/* Ajustes responsivos: centrar con margen en pantallas pequeñas */
+@media (max-width: 400px) {
+  .login-form {
+    width: 90%;
+    padding: 20px;
+  }
+}
